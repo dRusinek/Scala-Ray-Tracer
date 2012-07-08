@@ -17,30 +17,38 @@ class sphere(val a:Double,val b:Double,val c:Double,val r:Double,val x0:Double,v
     } 
    
    
-  object something {
+object something {
     def main(args: Array[String]) {
-    println("Enter sphere x coordinate")
-    val a = readDouble()  
-    println("Enter sphere y coordinate")
-    val b = readDouble()  
-    println("Enter sphere z coordinate")
-    val c = readDouble()
-    println("Enter radius")
-    val r = readDouble()
-    println("Enter ray starting x")
-    val x0 = readDouble()
-    println("Enter ray starting y")
-    val y0 = readDouble()
-    println("Enter ray starting z")
-    val z0 = readDouble()
-    println("Enter ray x component") // for the direction of the ray
-    val xd = readDouble()
-    println("Enter ray y component")
-    val yd = readDouble()
-    println("Enter ray z component")
-    val zd = readDouble()
-    val firstSphere = new sphere(a,b,c,r,x0,y0,z0,xd,yd,zd)
-    firstSphere.intersection
-       
+      while(true){
+        println("\nSphere or Plane?")
+        val input = readLine()
+          if(input=="Sphere"||input=="sphere"){
+      		println("Enter x coordinate")
+      		val a = readDouble()
+      		println("Enter y coordinate")
+      		val b = readDouble()
+      		println("Enter z coordinate")
+      		val c = readDouble()
+      		println("Enter radius")
+      		val r = readDouble()
+      		println("Enter ray starting x")
+      		val x0 = readDouble()
+      		println("Enter ray starting y")
+      		val y0 = readDouble()
+      		println("Enter ray starting z")
+      		val z0 = readDouble()
+      		println("Enter ray x component")
+      		val xd = readDouble()
+      		println("Enter ray y component")
+      		val yd = readDouble()
+      		println("Enter ray z component")
+      		val zd = readDouble()
+      		val Blah = new sphere(a,b,c,r,x0,y0,z0,xd,yd,zd)
+      		Blah.intersection
+     
+    	  } else if(input=="Plane"||input=="plane") {
+    	    println("PLANE YEAAHH!!!!!")
+    	  } else println("Do not understand")
+       }	  
     }
-  }
+}
